@@ -265,6 +265,8 @@ ssize_t fd_recv(int s, struct fd_rxbuf *rxbuf, struct iolist *first,
                 if(errno == EPIPE) errno = ECONNRESET;
                 return -1;
             }
+            /* If we have read data return it immediately */
+            if (read > 0) return read;
             /* Wait for more data. */
             int rc = fdin(s, deadline);
             if(dill_slow(rc < 0)) return -1;
