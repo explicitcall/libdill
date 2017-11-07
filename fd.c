@@ -291,7 +291,7 @@ void fd_close(int s) {
        be set, never mind and continue anyway. */
     struct linger lng;
     lng.l_onoff=1;
-    lng.l_linger=0;
+    lng.l_linger=1;
     setsockopt(s, SOL_SOCKET, SO_LINGER, (void*)&lng, sizeof(lng));
     /* We are not checking the error here. close() has inconsistent behaviour
        and leaking a file descriptor is better than crashing the entire
