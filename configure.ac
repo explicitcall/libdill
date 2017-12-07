@@ -89,6 +89,17 @@ if test "x$enable_valgrind" = "xyes"; then
 fi
 
 ################################################################################
+#  --enable-reuseport                                                           #
+################################################################################
+
+AC_ARG_ENABLE([reuseport], [AS_HELP_STRING([--enable-reuseport],
+    [Allows processes to reuse port [default=no]])])
+
+if test "x$enable_reuseport" = "xyes"; then
+    AC_DEFINE(SO_REUSEPORT)
+fi
+
+################################################################################
 #  --enable-gcov                                                               #
 ################################################################################
 
@@ -218,4 +229,3 @@ AC_CONFIG_MACRO_DIR([m4])
 
 AC_OUTPUT([Makefile man/Makefile libdill.pc])
 cp confdefs.h config.h
-

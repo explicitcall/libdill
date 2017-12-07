@@ -54,6 +54,12 @@ int fd_unblock(int s) {
     opt = 1;
     rc = setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof (opt));
     if(dill_slow(rc < 0)) return -1;
+#ifdef SO_REUSEPORT
+    /*  Allow re-using the same port by multiple processes. */
+    opt = 1;
+    rc = setsockopt(s, SOL_SOCKET, SO_REUSEPORT, &opt, sizeof (opt));
+    if(dill_slow(rc < 0)) return -1;
+#endif
     /* If possible, prevent SIGPIPE signal when writing to the connection
         already closed by the peer. */
 #ifdef SO_NOSIGPIPE
@@ -298,4 +304,3 @@ void fd_close(int s) {
        program. */
     close(s);
 }
-
