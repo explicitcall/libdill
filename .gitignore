@@ -82,3 +82,4 @@ tutorial/protocol/step8
 tutorial/protocol/step9
 tutorial/protocol/*.o
 tutorial/protocol/.dirstamp
+*.xcuserdatad

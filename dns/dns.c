@@ -71,6 +71,7 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #else
+#include <sys/time.h>
 #include <sys/types.h>		/* FD_SETSIZE socklen_t */
 #include <sys/select.h>		/* FD_ZERO FD_SET fd_set select(2) */
 #include <sys/socket.h>		/* AF_INET AF_INET6 AF_UNIX struct sockaddr struct sockaddr_in struct sockaddr_in6 socket(2) */

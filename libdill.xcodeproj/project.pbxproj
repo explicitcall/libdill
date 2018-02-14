@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,7 +41,88 @@
 		D1E611B31F4E3DD2004BE0E3 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A71F4E3DD2004BE0E3 /* utils.h */; };
 		D1E611B51F4E3DFC004BE0E3 /* libdillimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611B41F4E3DFC004BE0E3 /* libdillimpl.h */; };
 		D1E611BD1F4E3F16004BE0E3 /* rbtree.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611BC1F4E3F16004BE0E3 /* rbtree.h */; };
+		E264088420331F7C0036D84A /* crlf.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611261F4E3C00004BE0E3 /* crlf.c */; };
+		E264088520331F7C0036D84A /* bsock.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611271F4E3C00004BE0E3 /* bsock.c */; };
+		E264088620331F7C0036D84A /* chan.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611281F4E3C00004BE0E3 /* chan.c */; };
+		E264088720331F7C0036D84A /* cr.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6112D1F4E3C00004BE0E3 /* cr.c */; };
+		E264088820331F7C0036D84A /* ctx.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6112F1F4E3C00004BE0E3 /* ctx.c */; };
+		E264088920331F7C0036D84A /* dns.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611311F4E3C00004BE0E3 /* dns.c */; };
+		E264088A20331F7C0036D84A /* fd.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611331F4E3C00004BE0E3 /* fd.c */; };
+		E264088B20331F7C0036D84A /* handle.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611381F4E3C00004BE0E3 /* handle.c */; };
+		E264088C20331F7C0036D84A /* iol.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6113A1F4E3C00004BE0E3 /* iol.c */; };
+		E264088D20331F7C0036D84A /* ipaddr.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6113C1F4E3C00004BE0E3 /* ipaddr.c */; };
+		E264088E20331F7C0036D84A /* ipc.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6113E1F4E3C00004BE0E3 /* ipc.c */; };
+		E264088F20331F7C0036D84A /* libdill.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611401F4E3C00004BE0E3 /* libdill.c */; };
+		E264089020331F7C0036D84A /* msock.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611411F4E3C00004BE0E3 /* msock.c */; };
+		E264089120331F7C0036D84A /* now.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611421F4E3C00004BE0E3 /* now.c */; };
+		E264089220331F7C0036D84A /* pfx.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611451F4E3C00004BE0E3 /* pfx.c */; };
+		E264089320331F7C0036D84A /* pollset.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611461F4E3C00004BE0E3 /* pollset.c */; };
+		E264089420331F7C0036D84A /* rbtree.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E611481F4E3C00004BE0E3 /* rbtree.c */; };
+		E264089520331F7C0036D84A /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6114B1F4E3C00004BE0E3 /* stack.c */; };
+		E264089620331F7C0036D84A /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6115A1F4E3C00004BE0E3 /* tcp.c */; };
+		E264089720331F7C0036D84A /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = D1E6115F1F4E3C00004BE0E3 /* utils.c */; };
+		E264089920331FB20036D84A /* rbtree.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611BC1F4E3F16004BE0E3 /* rbtree.h */; };
+		E264089D20331FB20036D84A /* libdillimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611B41F4E3DFC004BE0E3 /* libdillimpl.h */; };
+		E264089E20331FB20036D84A /* cr.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E6119C1F4E3DD2004BE0E3 /* cr.h */; };
+		E264089F20331FB20036D84A /* ctx.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E6119D1F4E3DD2004BE0E3 /* ctx.h */; };
+		E26408A020331FB20036D84A /* fd.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E6119E1F4E3DD2004BE0E3 /* fd.h */; };
+		E26408A120331FB20036D84A /* iol.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E6119F1F4E3DD2004BE0E3 /* iol.h */; };
+		E26408A220331FB20036D84A /* libdill.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A01F4E3DD2004BE0E3 /* libdill.h */; };
+		E26408A320331FB20036D84A /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A11F4E3DD2004BE0E3 /* list.h */; };
+		E26408A420331FB20036D84A /* now.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A21F4E3DD2004BE0E3 /* now.h */; };
+		E26408A520331FB20036D84A /* pollset.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A31F4E3DD2004BE0E3 /* pollset.h */; };
+		E26408A620331FB20036D84A /* qlist.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A41F4E3DD2004BE0E3 /* qlist.h */; };
+		E26408A720331FB20036D84A /* slist.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A51F4E3DD2004BE0E3 /* slist.h */; };
+		E26408A820331FB20036D84A /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A61F4E3DD2004BE0E3 /* stack.h */; };
+		E26408A920331FB20036D84A /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A71F4E3DD2004BE0E3 /* utils.h */; };
+		E26408B3203321E20036D84A /* CLibdill.h in Headers */ = {isa = PBXBuildFile; fileRef = E26408B1203321E20036D84A /* CLibdill.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E26408B8203322100036D84A /* liblibdill-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E264087820331F520036D84A /* liblibdill-ios.a */; };
+		E26408C1203322600036D84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408C0203322600036D84A /* AppDelegate.swift */; };
+		E26408C3203322600036D84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408C2203322600036D84A /* ViewController.swift */; };
+		E26408C6203322600036D84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26408C4203322600036D84A /* Main.storyboard */; };
+		E26408C8203322600036D84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26408C7203322600036D84A /* Assets.xcassets */; };
+		E26408CB203322600036D84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26408C9203322600036D84A /* LaunchScreen.storyboard */; };
+		E26408D5203322F40036D84A /* FileDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408D0203322F40036D84A /* FileDescriptor.swift */; };
+		E26408D6203322F40036D84A /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408D1203322F40036D84A /* Time.swift */; };
+		E26408D7203322F40036D84A /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408D2203322F40036D84A /* Error.swift */; };
+		E26408D8203322F40036D84A /* Coroutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408D3203322F40036D84A /* Coroutine.swift */; };
+		E26408D9203322F40036D84A /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408D4203322F40036D84A /* Channel.swift */; };
+		E26408DB2033230D0036D84A /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408DA2033230D0036D84A /* Future.swift */; };
+		E26408DD203323F20036D84A /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26408DC203323F20036D84A /* Generator.swift */; };
+		E26408E0203324540036D84A /* CLibdill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26408AF203321E20036D84A /* CLibdill.framework */; };
+		E26408E1203324800036D84A /* libdillimpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611B41F4E3DFC004BE0E3 /* libdillimpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E26408E2203324800036D84A /* libdill.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E611A01F4E3DD2004BE0E3 /* libdill.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E26408E3203324C80036D84A /* liblibdill-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E264087820331F520036D84A /* liblibdill-ios.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E26408DE203324510036D84A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1E611141F4E3831004BE0E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E26408AE203321E20036D84A;
+			remoteInfo = CLibdill;
+		};
+		E26408E4203324CC0036D84A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1E611141F4E3831004BE0E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E264087720331F520036D84A;
+			remoteInfo = "libdill-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E264087620331F520036D84A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D1E6111E1F4E389F004BE0E3 /* liblibdill.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblibdill.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +167,25 @@
 		D1E611BE1F4E3F39004BE0E3 /* epoll.c.inc */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; fileEncoding = 4; path = epoll.c.inc; sourceTree = "<group>"; };
 		D1E611BF1F4E3F39004BE0E3 /* kqueue.c.inc */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; fileEncoding = 4; path = kqueue.c.inc; sourceTree = "<group>"; };
 		D1E611C11F4E3F39004BE0E3 /* poll.c.inc */ = {isa = PBXFileReference; explicitFileType = sourcecode.c; fileEncoding = 4; path = poll.c.inc; sourceTree = "<group>"; };
+		E264087820331F520036D84A /* liblibdill-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liblibdill-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26408AF203321E20036D84A /* CLibdill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLibdill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26408B1203321E20036D84A /* CLibdill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLibdill.h; sourceTree = "<group>"; };
+		E26408B2203321E20036D84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26408B9203322290036D84A /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		E26408BE203322600036D84A /* CLibdillExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLibdillExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26408C0203322600036D84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E26408C2203322600036D84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E26408C5203322600036D84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E26408C7203322600036D84A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E26408CA203322600036D84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E26408CC203322600036D84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26408D0203322F40036D84A /* FileDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDescriptor.swift; sourceTree = "<group>"; };
+		E26408D1203322F40036D84A /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		E26408D2203322F40036D84A /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		E26408D3203322F40036D84A /* Coroutine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coroutine.swift; sourceTree = "<group>"; };
+		E26408D4203322F40036D84A /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		E26408DA2033230D0036D84A /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		E26408DC203323F20036D84A /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +193,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E264087520331F520036D84A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26408AB203321E20036D84A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26408B8203322100036D84A /* liblibdill-ios.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26408BB203322600036D84A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26408E3203324C80036D84A /* liblibdill-ios.a in Frameworks */,
+				E26408E0203324540036D84A /* CLibdill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,14 +229,22 @@
 				D1E611251F4E3B22004BE0E3 /* libdill.xcconfig */,
 				D1E611241F4E38BE004BE0E3 /* include */,
 				D1E611231F4E38B6004BE0E3 /* src */,
+				E26408B0203321E20036D84A /* CLibdill */,
+				E26408BF203322600036D84A /* CLibdillExample */,
 				D1E6111F1F4E389F004BE0E3 /* Products */,
+				E26408B7203322100036D84A /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		D1E6111F1F4E389F004BE0E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				D1E6111E1F4E389F004BE0E3 /* liblibdill.dylib */,
+				E264087820331F520036D84A /* liblibdill-ios.a */,
+				E26408AF203321E20036D84A /* CLibdill.framework */,
+				E26408BE203322600036D84A /* CLibdillExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +303,43 @@
 			name = include;
 			sourceTree = "<group>";
 		};
+		E26408B0203321E20036D84A /* CLibdill */ = {
+			isa = PBXGroup;
+			children = (
+				E26408B1203321E20036D84A /* CLibdill.h */,
+				E26408B2203321E20036D84A /* Info.plist */,
+				E26408B9203322290036D84A /* module.modulemap */,
+			);
+			path = CLibdill;
+			sourceTree = "<group>";
+		};
+		E26408B7203322100036D84A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E26408BF203322600036D84A /* CLibdillExample */ = {
+			isa = PBXGroup;
+			children = (
+				E26408DA2033230D0036D84A /* Future.swift */,
+				E26408DC203323F20036D84A /* Generator.swift */,
+				E26408D4203322F40036D84A /* Channel.swift */,
+				E26408D3203322F40036D84A /* Coroutine.swift */,
+				E26408D2203322F40036D84A /* Error.swift */,
+				E26408D0203322F40036D84A /* FileDescriptor.swift */,
+				E26408D1203322F40036D84A /* Time.swift */,
+				E26408C0203322600036D84A /* AppDelegate.swift */,
+				E26408C2203322600036D84A /* ViewController.swift */,
+				E26408C4203322600036D84A /* Main.storyboard */,
+				E26408C7203322600036D84A /* Assets.xcassets */,
+				E26408C9203322600036D84A /* LaunchScreen.storyboard */,
+				E26408CC203322600036D84A /* Info.plist */,
+			);
+			path = CLibdillExample;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -195,6 +364,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E264089820331FA30036D84A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264089920331FB20036D84A /* rbtree.h in Headers */,
+				E264089D20331FB20036D84A /* libdillimpl.h in Headers */,
+				E264089E20331FB20036D84A /* cr.h in Headers */,
+				E264089F20331FB20036D84A /* ctx.h in Headers */,
+				E26408A020331FB20036D84A /* fd.h in Headers */,
+				E26408A120331FB20036D84A /* iol.h in Headers */,
+				E26408A220331FB20036D84A /* libdill.h in Headers */,
+				E26408A320331FB20036D84A /* list.h in Headers */,
+				E26408A420331FB20036D84A /* now.h in Headers */,
+				E26408A520331FB20036D84A /* pollset.h in Headers */,
+				E26408A620331FB20036D84A /* qlist.h in Headers */,
+				E26408A720331FB20036D84A /* slist.h in Headers */,
+				E26408A820331FB20036D84A /* stack.h in Headers */,
+				E26408A920331FB20036D84A /* utils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26408AC203321E20036D84A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26408B3203321E20036D84A /* CLibdill.h in Headers */,
+				E26408E1203324800036D84A /* libdillimpl.h in Headers */,
+				E26408E2203324800036D84A /* libdill.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -215,26 +415,98 @@
 			productReference = D1E6111E1F4E389F004BE0E3 /* liblibdill.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		E264087720331F520036D84A /* libdill-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E264087E20331F520036D84A /* Build configuration list for PBXNativeTarget "libdill-ios" */;
+			buildPhases = (
+				E264087420331F520036D84A /* Sources */,
+				E264087520331F520036D84A /* Frameworks */,
+				E264087620331F520036D84A /* CopyFiles */,
+				E264089820331FA30036D84A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "libdill-ios";
+			productName = "libdill-ios";
+			productReference = E264087820331F520036D84A /* liblibdill-ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E26408AE203321E20036D84A /* CLibdill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E26408B4203321E20036D84A /* Build configuration list for PBXNativeTarget "CLibdill" */;
+			buildPhases = (
+				E26408AA203321E20036D84A /* Sources */,
+				E26408AB203321E20036D84A /* Frameworks */,
+				E26408AC203321E20036D84A /* Headers */,
+				E26408AD203321E20036D84A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E26408E5203324CC0036D84A /* PBXTargetDependency */,
+			);
+			name = CLibdill;
+			productName = CLibdill;
+			productReference = E26408AF203321E20036D84A /* CLibdill.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E26408BD203322600036D84A /* CLibdillExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E26408CD203322600036D84A /* Build configuration list for PBXNativeTarget "CLibdillExample" */;
+			buildPhases = (
+				E26408BA203322600036D84A /* Sources */,
+				E26408BB203322600036D84A /* Frameworks */,
+				E26408BC203322600036D84A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E26408DF203324510036D84A /* PBXTargetDependency */,
+			);
+			name = CLibdillExample;
+			productName = CLibdillExample;
+			productReference = E26408BE203322600036D84A /* CLibdillExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D1E611141F4E3831004BE0E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
 				TargetAttributes = {
 					D1E6111D1F4E389F004BE0E3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
+					E264087720331F520036D84A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = H4Z9Z4RD2G;
+						ProvisioningStyle = Automatic;
+					};
+					E26408AE203321E20036D84A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = H4Z9Z4RD2G;
+						ProvisioningStyle = Automatic;
+					};
+					E26408BD203322600036D84A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = H4Z9Z4RD2G;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = D1E611171F4E3831004BE0E3 /* Build configuration list for PBXProject "libdill" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D1E611131F4E3831004BE0E3;
 			productRefGroup = D1E6111F1F4E389F004BE0E3 /* Products */;
@@ -242,9 +514,32 @@
 			projectRoot = "";
 			targets = (
 				D1E6111D1F4E389F004BE0E3 /* libdill */,
+				E264087720331F520036D84A /* libdill-ios */,
+				E26408AE203321E20036D84A /* CLibdill */,
+				E26408BD203322600036D84A /* CLibdillExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E26408AD203321E20036D84A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26408BC203322600036D84A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26408CB203322600036D84A /* LaunchScreen.storyboard in Resources */,
+				E26408C8203322600036D84A /* Assets.xcassets in Resources */,
+				E26408C6203322600036D84A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1E6111A1F4E389F004BE0E3 /* Sources */ = {
@@ -274,18 +569,148 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E264087420331F520036D84A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E264088420331F7C0036D84A /* crlf.c in Sources */,
+				E264088520331F7C0036D84A /* bsock.c in Sources */,
+				E264088620331F7C0036D84A /* chan.c in Sources */,
+				E264088720331F7C0036D84A /* cr.c in Sources */,
+				E264088820331F7C0036D84A /* ctx.c in Sources */,
+				E264088920331F7C0036D84A /* dns.c in Sources */,
+				E264088A20331F7C0036D84A /* fd.c in Sources */,
+				E264088B20331F7C0036D84A /* handle.c in Sources */,
+				E264088C20331F7C0036D84A /* iol.c in Sources */,
+				E264088D20331F7C0036D84A /* ipaddr.c in Sources */,
+				E264088E20331F7C0036D84A /* ipc.c in Sources */,
+				E264088F20331F7C0036D84A /* libdill.c in Sources */,
+				E264089020331F7C0036D84A /* msock.c in Sources */,
+				E264089120331F7C0036D84A /* now.c in Sources */,
+				E264089220331F7C0036D84A /* pfx.c in Sources */,
+				E264089320331F7C0036D84A /* pollset.c in Sources */,
+				E264089420331F7C0036D84A /* rbtree.c in Sources */,
+				E264089520331F7C0036D84A /* stack.c in Sources */,
+				E264089620331F7C0036D84A /* tcp.c in Sources */,
+				E264089720331F7C0036D84A /* utils.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26408AA203321E20036D84A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E26408BA203322600036D84A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26408D9203322F40036D84A /* Channel.swift in Sources */,
+				E26408D8203322F40036D84A /* Coroutine.swift in Sources */,
+				E26408DB2033230D0036D84A /* Future.swift in Sources */,
+				E26408D6203322F40036D84A /* Time.swift in Sources */,
+				E26408C3203322600036D84A /* ViewController.swift in Sources */,
+				E26408C1203322600036D84A /* AppDelegate.swift in Sources */,
+				E26408DD203323F20036D84A /* Generator.swift in Sources */,
+				E26408D7203322F40036D84A /* Error.swift in Sources */,
+				E26408D5203322F40036D84A /* FileDescriptor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E26408DF203324510036D84A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E26408AE203321E20036D84A /* CLibdill */;
+			targetProxy = E26408DE203324510036D84A /* PBXContainerItemProxy */;
+		};
+		E26408E5203324CC0036D84A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E264087720331F520036D84A /* libdill-ios */;
+			targetProxy = E26408E4203324CC0036D84A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E26408C4203322600036D84A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E26408C5203322600036D84A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E26408C9203322600036D84A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E26408CA203322600036D84A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D1E611181F4E3831004BE0E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		D1E611191F4E3831004BE0E3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 			};
 			name = Release;
 		};
@@ -388,6 +813,253 @@
 			};
 			name = Release;
 		};
+		E264087F20331F520036D84A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = H4Z9Z4RD2G;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E264088020331F520036D84A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = H4Z9Z4RD2G;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E26408B5203321E20036D84A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H4Z9Z4RD2G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CLibdill/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxdesiatov.CLibdill;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E26408B6203321E20036D84A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = H4Z9Z4RD2G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CLibdill/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxdesiatov.CLibdill;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E26408CE203322600036D84A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = H4Z9Z4RD2G;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CLibdillExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxdesiatov.CLibdillExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E26408CF203322600036D84A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = H4Z9Z4RD2G;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CLibdillExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxdesiatov.CLibdillExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -407,6 +1079,34 @@
 				D1E611211F4E389F004BE0E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E264087E20331F520036D84A /* Build configuration list for PBXNativeTarget "libdill-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E264087F20331F520036D84A /* Debug */,
+				E264088020331F520036D84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E26408B4203321E20036D84A /* Build configuration list for PBXNativeTarget "CLibdill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26408B5203321E20036D84A /* Debug */,
+				E26408B6203321E20036D84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E26408CD203322600036D84A /* Build configuration list for PBXNativeTarget "CLibdillExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26408CE203322600036D84A /* Debug */,
+				E26408CF203322600036D84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

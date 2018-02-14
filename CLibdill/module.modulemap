@@ -1,0 +1,4 @@
+module CLibdill [system] {
+    header "clibdill.h"
+    link "dill"
+}

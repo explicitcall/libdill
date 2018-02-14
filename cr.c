@@ -138,16 +138,16 @@ static inline void darwin_pool_pop() {
 
 static inline void darwin_pool_pop_push() {
     darwin_prepare();
-    
+
     if (runningTests) {
         return;
     }
-    
+
     if (autoreleasePool) {
         objc_autoreleasePoolPop_fptr(autoreleasePool);
         autoreleasePool = NULL;
     }
-    
+
     dill_assert(!autoreleasePool);
     autoreleasePool = objc_autoreleasePoolPush_fptr();
 }
@@ -275,6 +275,7 @@ static void dill_cancel(struct dill_cr *cr, int err);
 /* The initial part of go(). Allocates a new stack and handle. */
 int dill_prologue(sigjmp_buf **jb, void **ptr, size_t len,
       const char *file, int line) {
+  printf("dill_prologue\n");
 #ifdef __APPLE__
     darwin_pool_pop_push();
 #endif
@@ -359,6 +360,7 @@ int dill_prologue(sigjmp_buf **jb, void **ptr, size_t len,
 
 /* The final part of go(). Gets called when the coroutine is finished. */
 void dill_epilogue(void) {
+  printf("dill_epilogue\n");
 #ifdef __APPLE__
     darwin_pool_pop_push();
 #endif
